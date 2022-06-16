@@ -13,8 +13,14 @@ class comicsTableSeeder extends Seeder
     public function run()
     {
         $fumetti = config('comics');
-        $newComic = new comic();
-
+        $newComic = new Comic();
+        $newComic->title = 'title';
+        $newComic->description = 'description';
+        $newComic->image = 'image';
+        $newComic->price = 'price';
+        $newComic->series = 'series';
+        $newComic->sale_date = 'sale_date';
+        $newComic->type = 'type';
         $newComic->save();
     }
 }
